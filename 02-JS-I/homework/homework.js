@@ -198,7 +198,7 @@ function agregarSimboloExclamacion(str) {
   // Tu código:
   return str + "!";
 }
-console.log(agregarSimboloExclamacion("aguante la pepa"));
+console.log(agregarSimboloExclamacion("Buen dia"));
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
