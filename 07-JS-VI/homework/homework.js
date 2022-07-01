@@ -6,23 +6,44 @@ function mayuscula(nombre) {
   //Tu código:
 }
 
-function invocarCallback(cb) {
+function invocarCallback(x, cb) {
   // Invoca al callback `cb`
   //Tu código:
+  return cb;
 }
 
 function operacionMatematica(n1, n2, cb) {
   //Vamos a recibir una función que realiza una operación matemática como callback junto con dos números.
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
+  function cb(a, b) {
+    return a + b;
+  }
+  return cb(n1, n2);
 }
-
+console.log(operacionMatematica(1, 2));
 function sumarArray(numeros, cb) {
   // Suma todos los números enteros (int/integers) de un array ("numeros")
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
+  let sumadorArray = [];
+  let suma = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    const element = numeros[i];
+    if (element % 1 == 0) {
+      sumadorArray.push(element);
+      console.log(sumadorArray);
+    }
+  }
+  for (let i = 0; i < sumadorArray.length; i++) {
+    suma += sumadorArray[i];
+  }
+  return suma;
 }
+
+console.log("sumar array");
+console.log(sumarArray([0, 1, 2, 3]));
 
 function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
@@ -53,5 +74,5 @@ module.exports = {
   sumarArray,
   forEach,
   map,
-  filter
+  filter,
 };
